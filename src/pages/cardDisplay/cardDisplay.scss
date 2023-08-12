@@ -1,0 +1,39 @@
+$flex-left: 1;
+$flex-right: 1;
+
+@mixin flex-center($direction: row, $justify: end) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+.container-display {
+  display: flex;
+  gap: 4%;
+  margin-top: 5%;
+
+  .left-container {
+    flex: $flex-left;
+    @include flex-center();
+  }
+
+  .right-container {
+    flex: $flex-right;
+    @include flex-center(column, space-between);
+    display: flex;
+    margin-right: 5%;
+
+    .buy-btn {
+      align-self: flex-start;
+    }
+
+    h2 {
+      text-align: left;
+      font-family: Georgia, "Times New Roman", Times, serif;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

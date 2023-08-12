@@ -1,0 +1,16 @@
+//pages
+@import "./pages/home/home.scss";
+@import "./pages/cardDisplay/cardDisplay.scss";
+
+//components
+@import "./components/card/card.scss";
+@import "./components/navbar/navbar.scss";
+@import "./components/searchInput/searchInput.scss";
+@import "./components/thumbnail/thumbnail.scss";
+@import "./components/banner/banner.scss";
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
